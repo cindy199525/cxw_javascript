@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>window.location 对象</h1>
+
+    <p id="demo"></p>
+    <input type="button" value="Load new document" onclick="newDoc()">
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "本页面的完整 URL 是：<br>" + window.location.href;
+        document.getElementById("demo").innerHTML = "页面主机名是 " + window.location.hostname;
+        document.getElementById("demo").innerHTML = "页面路径是 " + window.location.pathname;
+        document.getElementById("demo").innerHTML = "页面协议是 " + window.location.protocol;
+        document.getElementById("demo").innerHTML = "端口号是： " + window.location.port;
+        function newDoc() {
+            window.location.assign("https://www.w3school.com.cn")
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript async / await
+        函数前的关键字 async 使函数返回 promise：
+    </h1>
+    <!-- async function myFunction() {
+                return "Hello";
+    }
+    async function myFunction() {
+                return Promise.resolve("Hello");
+    } -->
+
+    <p id="demo"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        async function myFunction() { return "Hello"; }
+
+        myFunction().then(
+            function (value) { myDisplayer(value); },
+            //function (error) { myDisplayer(error); }
+        );
+    </script>
+
+</body>
+
+</html>

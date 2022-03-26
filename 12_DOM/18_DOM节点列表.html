@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript HTML DOM</h1>
+
+    <p>Hello World!</p>
+
+    <p>Hello China!</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        var myNodelist = document.querySelectorAll("p");
+        document.getElementById("demo").innerHTML =
+            "第二段的 innerHTML 是：" +
+            myNodelist[1].innerHTML;
+        document.getElementById("demo2").innerHTML = myNodelist.length;
+    </script>
+
+</body>
+
+</html>

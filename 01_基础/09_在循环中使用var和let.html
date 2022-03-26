@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>使用 var 声明变量</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        var i = 5;
+        for (var i = 0; i < 3 ; i++) {
+            console.log(i)
+        }
+        document.getElementById("demo1").innerHTML = i;
+        // 在循环中使用的变量使用 var 重新声明了循环之外的变量
+
+
+        let a = 5;
+        for (let a = 0; a < 3 ; a++) {
+            console.log(a)
+        }
+        document.getElementById("demo2").innerHTML = a;
+        // 在循环中使用的变量使用 let 并没有重新声明了循环之外的变量
+    </script>
+
+</body>
+
+</html>

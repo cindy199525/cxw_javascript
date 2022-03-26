@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript defineProperty()</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // 创建对象：
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            language: "NO"
+        };
+        // 更改属性：
+        Object.defineProperty(person, "language", {
+            get: function () { return language },
+            set: function (value) { language = value.toUpperCase() }
+        });
+        // 修改语言：
+        person.language = "en";
+        // 显示语言：
+        document.getElementById("demo").innerHTML = person.language;
+    </script>
+
+</body>
+
+</html>

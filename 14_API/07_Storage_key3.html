@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Storage 对象</h1>
+
+    <p>本例演示如何遍历此域的所有本地存储项。</p>
+
+    <h2>缺少 localStorage 项目？</h2>
+
+    <p>由于您的本地存储中可能没有存储指定的项目，因此我们添加了一个脚本来为您创建它。</p>
+
+    <button onclick="createItems()">创建本地存储项</button>
+    <button onclick="deleteItems()">删除项目</button>
+
+    <h2>显示项目</h2>
+
+    <p>单击按钮来显示所有项目：</p>
+
+    <button onclick="displayItems()">显示项目</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function createItems() {
+            localStorage.setItem("mytime", Date.now());//localStorage.mytime = Date.now();
+            localStorage.setItem("myname", "Bill");
+            localStorage.setItem("myage", 19);
+        }
+        function deleteItems() {
+            localStorage.clear();
+        }
+
+        function displayItems() {
+            var l, i;
+            document.getElementById("demo").innerHTML = "";
+            for (i = 0; i < localStorage.length; i++) {
+                x = localStorage.key(i);
+                document.getElementById("demo").innerHTML += x + "<br>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

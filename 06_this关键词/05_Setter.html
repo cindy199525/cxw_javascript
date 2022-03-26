@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Getter 和 Setter</h1>
+
+    <p>Getter 和 Setter 允许您通过方法获取和设置属性。</p>
+
+    <p>此例为 language 属性创建 setter 和 getter。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // 创建对象：
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            language: "NO",
+            get lang() {
+                return this.language;
+            },
+            set lang(value) {
+                this.language = value.toUpperCase();
+            }
+        };
+        // 使用 setter 设置对象属性：
+        person.lang = "en";
+        // 使用 getter 显示来自对象的数据：
+        document.getElementById("demo").innerHTML = person.lang;
+    </script>
+
+</body>
+
+</html>

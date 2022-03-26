@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="div1">
+        <p id="p1">这是一段文字。</p>
+        <p id="p2">这是另一段文字。</p>
+    </div>
+
+    <script>
+
+        // appendChild() 方法，追加新元素作为父的最后一个子。
+
+        // 除此之外您还可以使用 insertBefore() 方法：
+        // removeChild删除某个 HTML 元素，您需要知晓该元素的父：
+        var para = document.createElement("p");
+        var node = document.createTextNode("这是新的文本。");
+        para.appendChild(node);
+        var element = document.getElementById("div1");
+        // element.appendChild(para);
+
+        var child = document.getElementById("p2");
+        // element.insertBefore(para, child);
+        parent.removeChild(child);
+        
+    </script>
+
+</body>
+
+</html>

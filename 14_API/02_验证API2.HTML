@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 验证</h1>
+
+    <p>请输入一个数字，然后单击“确定”：</p>
+
+    <input id="id1" type="number" max="100">
+    <button onclick="myFunction()">确定</button>
+
+    <p>如果数字大于 100（输入的 max 属性），则会显示错误消息。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            let text;
+            if (document.getElementById("id1").validity.rangeOverflow) {//rangeUnderflow
+                text = "Value too large";
+            } else {
+                text = "输入没问题";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Array.some()</h1>
+
+    <p>some() 方法检查某些数组值是否通过了测试。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var allOver18 = numbers.some(myFunction);
+
+        document.getElementById("demo").innerHTML = "Some over 18 is " + allOver18;
+
+        function myFunction(value) {
+            return value > 18;
+        }
+    </script>
+
+</body>
+
+</html>

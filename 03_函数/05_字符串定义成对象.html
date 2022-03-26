@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 字符串</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        var x = "Bill";              // x 是字符串
+        var y = new String("Bill");  // y 是对象
+        var z = new String("Bill");  // y 是对象
+
+        document.getElementById("demo1").innerHTML =
+            typeof x + "<br>" + typeof y;
+
+
+
+        document.getElementById("demo2").innerHTML = (x == y);
+        // (x == y) 为 true，因为 x 和 y 的值相等
+
+
+
+        document.getElementById("demo3").innerHTML = (x === y);
+        // (x === y) 为 false，因为 x 和 y 的类型不同（字符串与对象）
+
+
+        document.getElementById("demo4").innerHTML = (z == y);
+        // (z == y) 为 false，因为 Javascript 对象无法比较。
+
+
+
+        document.getElementById("demo5").innerHTML = (z === y);
+        // (z === y) 为 false，因为 Javascript 对象无法比较。
+    </script>
+
+</body>
+
+</html>

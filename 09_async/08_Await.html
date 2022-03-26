@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript async / await</h1>
+
+    <p>函数前的关键字 await 使函数等待 promise：
+        await 关键字只能在 async 函数中使用。
+    </p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        async function myDisplay() {
+            let myPromise = new Promise(function (myResolve, myReject) {
+                setTimeout(function () { myResolve("I love You !!"); }, 3000);
+            });
+            document.getElementById("demo").innerHTML = await myPromise;
+        }
+
+        myDisplay();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript 箭头函数</h2>
+
+    <p>此例展示了箭头函数的语法以及如何使用它。</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        var hello;
+
+        hello = () => {
+            return "Hello World!";
+        }
+
+        // hello = function () {
+        //     return "Hello World!";
+        // }
+
+        document.getElementById("demo").innerHTML = hello();
+
+
+
+        var hello2;
+
+        hello2 = (val) => "Hello " + val;
+        // hello2 = val => "Hello " + val;
+
+        document.getElementById("demo2").innerHTML = hello2("Universe!");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 全局变量</h1>
+
+    <p>在 HTML 中，通过 <b>var</b> 定义的全局变量会成为 window 变量。</p>
+    <p>在 HTML 中，通过 <b>let</b> 定义的全局变量<b>不会</b>成为 window 变量。</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        var carName1 = "Audi";
+        let carName2 = "Audi";
+
+        
+        document.getElementById("demo1").innerHTML = "我可以显示 " + window.carName1;
+        document.getElementById("demo2").innerHTML = "我不可以显示 " + window.carName2;
+    </script>
+
+</body>
+
+</html>

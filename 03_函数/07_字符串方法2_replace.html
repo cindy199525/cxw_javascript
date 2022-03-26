@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 字符串方法</h1>
+
+    <p>replace() 方法不会改变调用它的字符串。它返回的是新字符串。
+        replace() 对大小写敏感
+        <!-- 如需执行大小写不敏感的替换，请使用正则表达式 /i（大小写不敏感）：
+            var n = str.replace(/MICROSOFT/i, "W3School"); 
+        -->
+        <!-- 如需替换所有匹配，请使用正则表达式的 g 标志（用于全局搜索）：
+            var n = str.replace(/Microsoft/g, "W3School");
+        -->
+    </p>
+
+    <button onclick="myFunction()">试一试</button>
+
+    <p id="demo">请访问 Microsoft！</p>
+
+    <script>
+        function myFunction() {
+            var str = document.getElementById("demo").innerHTML;
+            var txt = str.replace("Microsoft", "W3School");
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>

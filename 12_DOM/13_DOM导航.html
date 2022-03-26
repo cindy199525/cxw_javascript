@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1 id="id01">我的第一张网页</h1>
+    <p id="id02"></p>
+
+    <script>
+        document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+        document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
+        document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+    </script>
+
+</body>
+
+</html>

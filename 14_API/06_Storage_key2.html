@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Storage key() 方法</h1>
+
+    <p>本例演示如何使用 key() 方法获取会话存储项的名称。</p>
+
+    <h2>缺少 localStorage 项目？</h2>
+
+    <p>由于您的会话存储中可能没有存储任何项目，因此我们添加了一个脚本来为您创建一些项目。</p>
+
+    <button onclick="createItems()">创建会话存储项</button>
+    <button onclick="deleteItem()">删除项目</button>
+
+    <h2>获取 sessionStorage 项目的名称</h2>
+
+    <p>点击按钮获取第一个会话存储项的名称：</p>
+
+    <button onclick="myFunction()">获取项目名称</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+        function createItems() {
+            sessionStorage.test1 = "hello";
+            sessionStorage.test2 = "Bill";
+            sessionStorage.test3 = 123;
+        }
+        function deleteItem() {
+            localStorage.removeItem("test1");
+        }
+
+        function myFunction() {
+            var x = sessionStorage.key(3);
+            //var x = sessionStorage.test1;
+            // var x = sessionStorage["test1"];
+            document.getElementById("demo").innerHTML = x;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>通过标签名查找 HTML 元素</h1>
+
+    <p>Hello World!</p>
+
+    <p>本例演示 <b>getElementsByTagName</b> 方法。
+        本例查找所有 <p> 元素：</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementsByTagName("p");
+        alert(x[0])// 本例查找所有 <p> 元素
+        document.getElementById("demo").innerHTML =
+            '第一段中的文本 (index 0) 是：' + x[0].innerHTML;
+    </script>
+
+</body>
+
+</html>

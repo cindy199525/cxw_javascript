@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Promise</h1>
+
+    <p>等待 3 秒（3000 毫秒）让此页面发生变化。</p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        const myPromise = new Promise(function (myResolve, myReject) {
+            setTimeout(function () { myResolve("I love You !!"); }, 3000);
+        });
+
+        myPromise.then(function (value) {
+            document.getElementById("demo").innerHTML = value;
+        });
+    </script>
+
+</body>
+
+</html>

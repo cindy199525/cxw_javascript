@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript HTML DOM</h1>
+
+    <p>Hello World!</p>
+
+    <p>Hello China!</p>
+
+    <p>单击按钮可更改所有 p 元素的颜色。</p>
+
+    <button onclick="myFunction()">试一试</button>
+
+    <script>
+        function myFunction() {
+            var myCollection = document.getElementsByTagName("p");
+            var i;
+            for (i = 0; i < myCollection.length; i++) {
+                myCollection[i].style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

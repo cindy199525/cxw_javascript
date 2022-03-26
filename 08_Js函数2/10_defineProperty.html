@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+</head>
+
+<body>
+
+    <h1>JavaScript defineProperty()</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // 创建对象：
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            language: "NO",
+        };
+        // 更改属性：
+        Object.defineProperty(person, "language", {
+            value: "EN",
+            writable: true,
+            enumerable: true,
+            configurable: true
+        });
+        // 枚举属性
+        txt = "";
+        for (var x in person) {
+            txt += person[x] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 对象属性：for...in 循环中的代码块会为每个属性执行一次。</h1>
+    <h1>您可以向现有对象添加新属性。</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        var txt = "";
+        var person = { fname: "Bill", lname: "Gates", age: 62 };
+        person.nationality = "English";
+        delete person.age;
+        var x;
+        for (x in person) {
+            txt += person[x] + " ";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+
+</body>
+
+</html>

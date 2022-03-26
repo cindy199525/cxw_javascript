@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 数字方法</h1>
+
+    <p>toExponential() 方法返回一个字符串，包含进行舍入的数字并使用指数表示法。</p>
+
+    <p>可选参数定义小数点后面的位数。</p>
+
+    <p>toFixed() 方法将数字四舍五入为给定的位数。它包含了指定位数小数的数字</p>
+
+    <p>toPrecision() 方法返回一个字符串，其中包含一个用指定长度写的数字：</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = 9.656;
+        document.getElementById("demo").innerHTML =
+            x.toExponential() + "<br>" +
+            x.toExponential(2) + "<br>" +
+            x.toExponential(4) + "<br>" +
+            x.toExponential(6) + "<br>" +
+            x.toFixed(0) + "<br>" +
+            x.toFixed(2) + "<br>" +
+            x.toFixed(4) + "<br>" +
+            x.toFixed(6) + "<br>" +
+            x.toPrecision() + "<br>" +
+            x.toPrecision(2) + "<br>" +
+            x.toPrecision(4) + "<br>" +
+            x.toPrecision(6); 
+    </script>
+
+</body>
+
+</html>

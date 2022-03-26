@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="myFunction()">后退</button>
+    <button onclick="myFunction2()">后退两页</button>
+    <button onclick="myFunction3()">返回历史列表中的 URL 数量。</button>
+    <button onclick="myFunction3()">加载历史列表中的下一个 URL。</button>
+
+    <script>
+        function myFunction() {
+            window.history.back();
+        }
+        function myFunction2() {
+            window.history.go(-2);
+        }
+        function myFunction3() {
+            window.history.length;
+        }
+        function myFunction4() {
+            window.history.forward;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

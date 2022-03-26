@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript <b>this</b> 关键词</h2>
+
+    <p>在本例中，<b>this</b> 代表 <b>person</b> 对象。</p>
+
+    <p>因为 person 对象“拥有” fullName 方法。</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const person = {
+            name: "Bill",
+            today: new Date(),
+            age: function () { return 19; }
+        };
+        person.age = person.age.toString();
+
+        let myString = JSON.stringify(person);
+        document.getElementById("demo").innerHTML = myString;
+
+
+        const arr = ["John", "Peter", "Sally", "Jane"];
+
+        let myString1 = JSON.stringify(arr);
+        document.getElementById("demo2").innerHTML = myString1;
+    </script>
+
+</body>
+
+</html>

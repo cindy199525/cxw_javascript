@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Navigator 对象</h1>
+
+    <p>如果启用了 cookie，则 cookieEnabled 属性返回 true：</p>
+    <!-- "Netscape" 是 IE11、Chrome、Firefox 以及 Safari 的应用程序名称的统称。
+    "Mozilla" 是 Chrome、Firefox、IE、Safari 以及 Opera 的应用程序代码名称。 -->
+    <!-- appVersion 属性返回有关浏览器的版本信息： -->
+    <!-- userAgent 属性返回由浏览器发送到服务器的用户代理报头（user-agent header）： -->
+    <!-- platform 属性返回浏览器平台（操作系统）： -->
+    <!-- language 属性返回浏览器语言： -->
+    <!-- onLine 属性返回 true，假如浏览器在线： -->
+    <!-- javaEnabled() 方法返回 true，如果 Java 已启用： -->
+
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "navigator.cookieEnabled 是：" + navigator.cookieEnabled;
+        document.getElementById("demo").innerHTML = "navigator.appName is " + navigator.appName;
+        document.getElementById("demo").innerHTML = "navigator.appCodeName is " + navigator.appCodeName;
+        document.getElementById("demo").innerHTML = navigator.appVersion;
+        document.getElementById("demo").innerHTML = navigator.userAgent;
+        document.getElementById("demo").innerHTML = navigator.platform;
+        document.getElementById("demo").innerHTML = navigator.language;
+        document.getElementById("demo").innerHTML = navigator.onLine;
+        document.getElementById("demo").innerHTML = navigator.javaEnabled();
+    </script>
+
+</body>
+
+</html>

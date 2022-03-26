@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript async / await</h1>
+
+    <p>请等待 3 秒（3000 毫秒）让此页面发生变化。</p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        async function myDisplay() {
+            let myPromise = new Promise(function (myResolve, myReject) {
+                setTimeout(function () { myResolve("I love You !!"); }, 3000);
+            });
+            document.getElementById("demo").innerHTML = await myPromise;
+        }
+
+        myDisplay();
+    </script>
+
+</body>
+
+</html>

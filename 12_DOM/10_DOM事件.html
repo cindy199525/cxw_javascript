@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <h1 onclick="this.innerHTML='谢谢！'">请点击此文本！</h1>
+    <h1 onclick="changeText(this)">请点击此文本！</h1>
+    请输入您的名字：<input type="text" id="fname" onchange="myFunction()">
+
+    <p>离开输入字段时，会触发一个函数，将输入文本转换为大写。
+        下面是一个如何使用 onchange 的例子。当用户改变输入字段内容时，会调用 upperCase() 函数。
+    </p>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        请把鼠标移上来</div>
+    <br>
+
+
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+        点击鼠标</div>
+
+
+    <script>
+        function changeText(id) {
+            id.innerHTML = "谢谢！";
+        }
+
+        function myFunction() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+
+        function mOver(obj) {
+            obj.innerHTML = "谢谢您"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "请把鼠标移上来"
+        }
+
+        function mDown(obj) {
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHTML = "松开鼠标";
+        }
+
+        function mUp(obj) {
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = "谢谢您";
+        }
+    </script>
+
+</body>
+
+</html>

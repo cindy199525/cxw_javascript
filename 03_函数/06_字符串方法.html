@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 字符串方法</h1>
+
+    <p>indexOf() 方法返回指定文本首次出现的位置：</p>
+    <p>lastIndexOf() 方法返回指定文本在字符串中最后一次出现的索引：</p>
+    <p>如果未找到文本， indexOf() 和 lastIndexOf() 均返回 -1。</p>
+    <p>indexOf() 方法接受第二个参数作为搜索的起始位置：</p>
+    <p>search() 方法返回字符串中指定文本第一次出现的位置：</p>
+    <p>slice() 提取字符串的某个部分，并在新字符串中返回被提取的部分。<br>
+        该方法设置两个参数：起始索引（开始位置），终止索引（结束位置）<br>
+        如果某个参数为负，则从字符串的结尾开始计数。<br>
+        如果省略第二个参数，则该方法将裁剪字符串的剩余部分：
+    </p>
+    <p>substring() 类似于 slice()。不同之处在于 substring() 无法接受负的索引。
+    </p>
+    <p>
+        substr() 类似于 slice()。不同之处在于第二个参数规定被提取部分的长度。
+        第二个参数不能为负，因为它定义的是长度。
+    </p>
+
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+
+    <script>
+        var str = "The full name of China is the People's Republic of China.";
+        var pos = str.indexOf("f");
+        var pos2 = str.lastIndexOf("China");
+        var pos3 = str.lastIndexOf("cindy");
+        var pos4 = str.indexOf("full",3);
+        var pos5 = str.search("fu");
+        var res = str.slice(7,13);
+        var res2 = str.slice(-13,-7);
+        var res3 = str.slice(7);
+        var res4 = str.slice(-13);
+
+
+        document.getElementById("demo1").innerHTML = pos;
+        document.getElementById("demo2").innerHTML = pos2;
+        document.getElementById("demo3").innerHTML = pos3;
+        document.getElementById("demo4").innerHTML = pos4;
+        document.getElementById("demo5").innerHTML = pos5;
+        document.getElementById("demo6").innerHTML = res;
+        document.getElementById("demo7").innerHTML = res2;
+        document.getElementById("demo8").innerHTML = res3;
+        document.getElementById("demo9").innerHTML = res4;
+        document.getElementById("demo10").innerHTML = pos5;
+
+        
+    </script>
+
+</body>
+
+</html>

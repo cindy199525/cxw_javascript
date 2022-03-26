@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript 回调</h2>
+
+    <p>进行计算，然后显示结果。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        // function myCalculator(num1, num2) {
+        //     let sum = num1 + num2;
+        //     myDisplayer(sum);
+        // }
+
+        // myCalculator(5, 5);
+
+
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer);
+
+
+
+    </script>
+
+</body>
+
+</html>

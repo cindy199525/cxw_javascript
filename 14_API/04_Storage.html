@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- sessionStorage 对象与 localStorage 对象相同。
+
+    不同之处在于 sessionStorage 对象存储会话的数据。
+
+    当浏览器关闭时，数据会被删除。 -->
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        localStorage.setItem("name", "Bill Gates");
+        document.getElementById("demo").innerHTML = localStorage.getItem("name");
+        sessionStorage.setItem("name", "Bill Gates");
+        document.getElementById("demo2").innerHTML = sessionStorage.getItem("name");
+    </script>
+
+</body>
+
+</html>

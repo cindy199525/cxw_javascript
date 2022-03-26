@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript 回调</h1>
+
+    <p>等待 3 秒（3000 毫秒）让此页面发生变化。
+        当您将函数作为参数传递时，请记住不要使用括号。
+
+        正确：setTimeout(myFunction, 3000);
+
+        错误：setTimeout(myFunction(), 3000);
+    </p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        // setTimeout(myFunction, 3000);
+
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML = "I love You !!";
+        // }
+
+
+        setTimeout(function () { myFunction("I love You !!!"); }, 3000);
+
+        function myFunction(value) {
+            document.getElementById("demo").innerHTML = value;
+        }
+    </script>
+
+</body>
+
+</html>
