@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JSON.stringify 会删除对象中的任何函数</h1>
+    <p>如果您在运行 JSON.stringify() 函数前已将函数转换为字符串，这个环节可以省略。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var obj = { name: "Bill Gates", age: function () { return 62; }, city: "Seattle" };
+        //obj.age = obj.age.toString();
+        var myJSON = JSON.stringify(obj);
+        document.getElementById("demo").innerHTML = myJSON;
+    </script>
+
+</body>
+
+</html>

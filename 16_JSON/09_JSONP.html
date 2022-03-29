@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- 
+
+        *****************
+        注：代码有bug,应该是php文件有错误 
+
+
+    -->
+
+    <h1>使用 script 标签请求 JSON</h1>
+
+    <p>PHP 文件所返回的函数调用处理的是 JSON 数据。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunc(myObj) {
+            document.getElementById("demo").innerHTML = myObj.name;
+        }
+    </script>
+
+    <script src="demo_php_jsonp.php"></script>
+
+</body>
+
+</html>

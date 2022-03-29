@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <!-- JSON
+            { "name":"Bill Gates" }
+            JSON 中，字符串值必须由双引号编写：
+
+         JavaScript
+            { name:"Bill Gates" } -->
+    <p id="demo"></p>
+    <!-- <h2>把 JavaScript 对象转换为 JSON 字符串，然后发送到服务器。</h2> -->
+
+    <script>
+        var myObj = { name: "Bill Gates", age: 62, city: "Seattle" };
+        var myJSON = JSON.stringify(myObj);
+        document.getElementById("demo").innerHTML = myJSON;
+    </script>
+
+</body>
+
+</html>

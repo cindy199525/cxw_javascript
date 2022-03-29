@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <HEAD></HEAD>
+
+<body>
+    <!-- 注：程序有bug，怀疑是PHP文件有问题 -->
+
+    <h1>XMLHttpRequest 对象</h1>
+
+    <h2>请在下面的输入字段中键入字母 A-Z：</h2>
+
+    <p>搜索建议：<span id="txtHint"></span></p>
+
+    <p>姓名：<input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
+
+    <script>
+        function showHint(str) {
+            var xhttp;
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                console.log("输入为空")
+                return;
+            }
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                    console.log("输入为111")
+                }
+            };
+            xhttp.open("GET", "gethint.php?q=" + str, true);
+            xhttp.send();
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>数组内容</h1>
+
+    <p>以 JSON 数组写的内容会被转换为 JavaScript 数组。</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = myArr;
+                document.getElementById("demo2").innerHTML = myArr[0];
+            }
+        };
+        xmlhttp.open("GET", "json_demo_array.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <!-- <p>查看 <a href="/example/json/json_demo_array.txt" target="_blank">json_demo_array.txt</a></p> -->
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script src="/jquery/jquery.min.js"></script> -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+</head>
+
+<body>
+
+    <h1>通过 id 查找 HTML 元素</h1>
+
+    <p id="id01">Hello World!</p>
+    <p id="id02">Hello China!</p>
+    <p id="id03">Hello Shanghai!</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var myElements = $("#id03")
+        // alert(myElements[0])
+        console.log(myElements[0])
+        $("#demo").text("段落 id03 的文本是：" + myElements[0].innerHTML);
+
+
+        var myElement = document.getElementById("id03");
+        //alert(myElement)
+        console.log(myElement)
+        document.getElementById("demo").innerHTML = "段落 id03 的文本是：" + myElement.innerHTML;
+
+        var myElements = $("p");
+        console.log(myElements[2])
+        $("#demo").text("第三段中的文本是：" + myElements[1].innerHTML);
+
+        var myElements = document.getElementsByTagName("p");
+        console.log(myElements[2])
+        document.getElementById("demo").innerHTML = "第三段中的文本是：" + myElements[2].innerHTML;
+
+
+
+    </script>
+
+</body>
+
+</html>

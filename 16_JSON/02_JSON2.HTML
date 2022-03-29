@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>把 JSON 格式的字符串，转换为 JavaScript 对象：</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        var myJSON = '{ "name":"Bill Gates",  "age":62, "city":"Seattle" }';
+        var myObj = JSON.parse(myJSON);
+        document.getElementById("demo").innerHTML = myObj.name;
+    </script>
+
+</body>
+
+</html>
